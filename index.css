@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+:root {
+  --title-font: "Roboto", sans-serif;
+  --main-font: "Open Sans", sans-serif;
+  --main-color: #4722eb;
+  --secondary-color: #a8a1cc;
+  --alt-color:rgba(255, 100, 100, 0.486) ;
+  --text-color: #fff;
+}
+.device {
+  position: relative;
+  width: 345px;
+  height: 600px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #eee, #ddd);
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+.lines-container {
+background-color: var(--alt-color);
+  width: 60px;
+  margin-left: auto;
+  cursor: pointer;
+  border: 1px solid var(--main-color);
+  border-radius: 1px;
+}
+.lines-container:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--main-color);
+}
+.line {
+  height: 3px;
+  margin: 5px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  margin-right: auto;
+  transition: width 0.5s ease-out;
+}
+
+.line-1 {
+  width: 50px;
+}
+.line-2 {
+  width: 40px;
+}
+.line-3 {
+  width: 30px;
+}
+.lines-container:hover .line-1 {
+  width: 30px;
+  background-color: var(--main-color);
+}
+.lines-container:hover .line-2 {
+  width: 40px;
+  background-color: var(--main-color);
+}
+.lines-container:hover .line-3 {
+  width: 50px;
+  background-color: var(--main-color);
+}
+
+.menu {
+  list-style-type: none;
+  border-bottom: 1px solid var(--secondary-color);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+  position: relative;
+}
+.pointer {
+  width: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: white var(--main-color) var(--main-color) var(--main-color);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.pointer:hover {
+  border-color: var(--main-color) var(--main-color) var(--main-color) var(--main-color);
+}
+.pointer-up {
+  border-color: var(--secondary-color) var(--secondary-color) white var(--secondary-color);
+  transform: translateY(-21px);
+}
+.pointer-up:hover {
+  border-color: var(--secondary-color) var(--secondary-color) var(--main-color) var(--secondary-color);
+}
+a.navlink {
+  display: block;
+  color: whitesmoke;
+  text-decoration: none;
+  margin-top: 2px;
+  background-color: var(--secondary-color);
+  padding: 1em;
+  transition: all 0.5s linear;
+}
+
+.btn-anime::after {
+  right: 4.8%;
+  bottom: 20%;
+  box-shadow: 0px 0px 0px 0px var(--main-color);
+}
